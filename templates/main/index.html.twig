@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ваше ТЗ{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index-page/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <main>
+        <div class="container">
+
+            <h1 class="main-h1">
+                Исполнение тестового задания для <strong>GeoService</strong>
+            </h1>
+
+            <section class="forms">
+
+                {{ form_errors(form) }}
+                {{ form_start(form) }}
+
+                {% for flash_error in app.flashes('error') %}
+                    <div class="main-h3" role="alert">{{ flash_error }}</div>
+                {% endfor %}
+
+                {{ form_row(form.zoom) }}
+                {{ form_row(form.x) }}
+                {{ form_row(form.y) }}
+
+                <button type="submit" class="sumbit-button">Поехали</button>
+                {{ form_end(form) }}
+
+            </section>
+        </div>
+    </main>
+
+{% endblock %}

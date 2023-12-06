@@ -1,0 +1,15 @@
+:root {
+    --white-color: #FCFCFC;
+    --gray-and-white-color: #ECECEC;
+    --black-color-text: #4D4D4D;
+
+    --accent-color: #4681ce;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}

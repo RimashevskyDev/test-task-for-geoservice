@@ -1,0 +1,80 @@
+@import url("/css/main.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body, header, footer {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--gray-and-white-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 130px;
+}
+
+.main-h1 {
+    text-align: center;
+
+    color: var(--black-color-text);
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.main-h1 strong {
+    color: var(--accent-color);
+}
+
+.main-h3 {
+    text-align: center;
+
+    color: var(--black-color-text);
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.h3-frame-desc {
+    text-align: left;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sumbit-button {
+    margin-top: 10px;
+
+    border: 0;
+    border-radius: 6px;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid var(--gray-color-text);
+    color: var(--black-color-text);
+    margin-top: 10px;
+}
+
+.iframe {
+    height: 256px;
+    width: 256px;
+}

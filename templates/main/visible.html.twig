@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ваше ТЗ{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index-page/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <main>
+        <div class="container">
+            <h1 class="main-h1">
+                Исполнение тестового задания для <strong>GeoService</strong>
+            </h1>
+
+            <h3 class="main-h3">X: {{ x }}</h3>
+            <h3 class="main-h3">Y: {{ y }}</h3>
+
+            <h3 class="main-h3">ZOOM: {{ zoom }}</h3>
+
+            <h3 class="main-h3 h3-frame-desc">Фотография плитки:</h3>
+            <iframe src="{{ iframe }}" sandbox="allow-scripts allow-same-origin" class="iframe"></iframe>
+
+            <h3 class="main-h3 h3-frame-desc">Координаты:</h3>
+            <h3 class="main-h3 h3-frame-desc">Широта: {{ latitude }}</h3>
+            <h3 class="main-h3 h3-frame-desc">Долгота: {{ longitude }}</h3>
+        </div>
+    </main>
+{% endblock %}
